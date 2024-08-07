@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .button-container {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        button {
+            font-size: 24px;
+            padding: 20px 40px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form method="POST">
+        <div class="button-container">
+            <button type="submit" name="left_button">&lt;</button>
+            <!-- <button type="submit" name="stop_button">STOP</button> -->
+            <button type="submit" name="right_button">&gt;</button>
+        </div>
+    </form>
+    {% if command %}
+        <p>{{ command.upper() }}</p>
+    {% endif %}
+</body>
+</html>
